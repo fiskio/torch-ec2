@@ -37,7 +37,6 @@ curl -sk https://raw.githubusercontent.com/torch/ezinstall/master/install-deps |
 git clone https://github.com/torch/distro.git ~/torch-distro --recursive
 cd ~/torch-distro; ./install.sh
 
-source ~/.bashrc
 
 # Torch + LuaJIT
 #curl -sk https://raw.githubusercontent.com/torch/ezinstall/master/install-luajit+torch | sudo bash
@@ -51,5 +50,10 @@ luarocks install cudnn
 # Clean up
 sudo apt-get clean
 
+# Make local disk accessible
+sudo chmod 777 /mnt
+
+# Finally
+source ~/.bashrc
 th -e "print 'I just installed Torch! Yesss.'"
 
