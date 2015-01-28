@@ -30,19 +30,26 @@ export PATH=/usr/local/cuda-6.5/bin:$PATH # 6.5
 export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64:$LD_LIBRARY_PATH # 6.5
 
 # FB extensions
-curl -sk https://raw.githubusercontent.com/facebook/fblualib/master/install_all.sh | sudo bash
+#curl -sk https://raw.githubusercontent.com/facebook/fblualib/master/install_all.sh | sudo bash
 
 # Torch Deps
-#curl -sk https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | sudo bash
+curl -sk https://raw.githubusercontent.com/torch/ezinstall/master/install-deps | sudo bash
+git clone https://github.com/torch/distro.git ~/torch-distro --recursive
+cd ~/torch-distro; ./install.sh
+
+source ~/.bashrc
 
 # Torch + LuaJIT
 #curl -sk https://raw.githubusercontent.com/torch/ezinstall/master/install-luajit+torch | sudo bash
 
 # Torch CUDA
-sudo luarocks install cutorch
-sudo luarocks install cunn
-sudo luarocks install cunnx
-sudo luarocks install cudnn
+luarocks install cutorch
+luarocks install cunn
+luarocks install cunnx
+luarocks install cudnn
 
 # Clean up
 sudo apt-get clean
+
+th -e "print 'I just installed Torch! Yesss.'"
+
