@@ -26,8 +26,8 @@ sudo dpkg -i `basename $CUDA_DEB`
 sudo apt-get update
 sudo apt-get install -y cuda
 rm `basename $CUDA_DEB`
-export PATH=/usr/local/cuda-6.5/bin:$PATH # 6.5
-export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64:$LD_LIBRARY_PATH # 6.5
+echo 'export PATH=/usr/local/cuda-6.5/bin:$PATH' >> ~/.bashrc # 6.5
+echo 'export LD_LIBRARY_PATH=/usr/local/cuda-6.5/lib64:$LD_LIBRARY_PATH' >> ~/.bashrc # 6.5
 
 # FB extensions
 #curl -sk https://raw.githubusercontent.com/facebook/fblualib/master/install_all.sh | sudo bash
@@ -42,10 +42,10 @@ cd ~/torch-distro; ./install.sh
 #curl -sk https://raw.githubusercontent.com/torch/ezinstall/master/install-luajit+torch | sudo bash
 
 # Torch CUDA
-luarocks install cutorch
-luarocks install cunn
-luarocks install cunnx
-luarocks install cudnn
+#luarocks install cutorch
+#luarocks install cunn
+#luarocks install cunnx
+#luarocks install cudnn
 
 # Clean up
 sudo apt-get clean
