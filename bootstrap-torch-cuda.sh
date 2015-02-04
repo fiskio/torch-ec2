@@ -12,6 +12,7 @@ sudo apt-get install -y gnuplot
 sudo apt-get install -y rsync
 sudo apt-get install -y wget
 sudo apt-get install -y libsdl2-dev
+sudo apt-get install -y pv
 
 # AWS CLI
 wget $PIP
