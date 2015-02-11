@@ -13,7 +13,7 @@ sudo apt-get install -y rsync
 sudo apt-get install -y wget
 sudo apt-get install -y libsdl2-dev
 sudo apt-get install -y pv
-sudo apt-get install -y libboost-dev libboost-iostreams-dev zlib1g-dev g++ pigz pv
+sudo apt-get install -y libboost-dev libboost-iostreams-dev zlib1g-dev g++ pigz pv subversion
 
 # AWS CLI
 wget $PIP
