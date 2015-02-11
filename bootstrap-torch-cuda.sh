@@ -46,7 +46,7 @@ cd ~/torch-distro; ./install.sh
 # Torch CUDA
 #luarocks install cutorch
 #luarocks install cunn
-#luarocks install cunnx
+luarocks install cunnx
 #luarocks install cudnn
 
 # Clean up
