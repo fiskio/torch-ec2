@@ -43,6 +43,9 @@ cd ~/torch-distro; ./install.sh
 # Torch + LuaJIT
 #curl -sk https://raw.githubusercontent.com/torch/ezinstall/master/install-luajit+torch | sudo bash
 
+# Torch Extras
+luarocks install nngraph
+
 # Torch CUDA
 #luarocks install cutorch
 #luarocks install cunn
